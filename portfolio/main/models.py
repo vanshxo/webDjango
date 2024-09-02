@@ -12,3 +12,12 @@ class Experience(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     description = models.TextField()
+
+
+
+class Resume(models.Model):
+    file = models.FileField(upload_to='resumes/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Resume uploaded on {self.uploaded_at}"
