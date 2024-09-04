@@ -129,3 +129,31 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# settings.py
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'postmaster@sandboxa3de31781d7345ce8ad9bda39e5c72f4.mailgun.org'  # Replace with your Mailgun domain
+EMAIL_HOST_PASSWORD = '2343fee10d587da402002b26ed6f8a8f-2b755df8-910960df'   # Replace with your Mailgun SMTP password
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'vansh@sandboxa3de31781d7345ce8ad9bda39e5c72f4.mailgun.org'  # Replace with your "from" email
+
+
+
+# Enable debugging for SMTP
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
