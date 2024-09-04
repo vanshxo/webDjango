@@ -5,6 +5,8 @@ from .models import Resume
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from .github_utils import get_github_repositories, get_github_user
+
 # Create your views here.
 def home(request):
     return render(request, "index.html")
@@ -44,3 +46,18 @@ def contact_view(request):
         return redirect('/')  # Redirect back to the home page or wherever you prefer
     
     return render(request, 'index.html')
+
+
+
+
+
+def github_profile(request):
+    username = "vanshxo"  # Your GitHub username
+    repos = get_github_repositories(username)
+    user = get_github_user(username)
+    
+    context = {
+        'user': user,
+        'repos': repos
+    }
+    return render(request, 'github_profile.html', context)

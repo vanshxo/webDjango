@@ -1,0 +1,23 @@
+<!-- github_profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.name }}'s GitHub Profile</title>
+    <!-- Include any styles or scripts here -->
+</head>
+<body>
+    <h1>{{ user.name }}'s GitHub Profile</h1>
+    <p>{{ user.bio }}</p>
+    <img src="{{ user.avatar_url }}" alt="{{ user.name }}'s avatar" width="100">
+
+    <h2>Repositories</h2>
+    <ul>
+        {% for repo in repos %}
+            <li>
+                <a href="{{ repo.html_url }}" target="_blank">{{ repo.name }}</a> - {{ repo.description }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
