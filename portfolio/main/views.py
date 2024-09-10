@@ -9,9 +9,12 @@ from .github_utils import get_github_repositories, get_github_user
 
 # Create your views here.
 def home(request):
-    return render(request, "index.html")
+    return render(request, "index2.html")
 
-
+def resume(request):
+    return render(request, "resume.html")
+def projects(request):
+    return render(request, "projects.html")
 
 def download_resume(request):
     try:
@@ -45,7 +48,7 @@ def contact_view(request):
         
         return redirect('/')  # Redirect back to the home page or wherever you prefer
     
-    return render(request, 'index.html')
+    return render(request, 'contact.html')
 
 
 

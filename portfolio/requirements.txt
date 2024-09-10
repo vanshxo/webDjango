@@ -1,7 +1,7 @@
 asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1711268871457/work
 certifi==2024.8.30
 charset-normalizer==3.3.2
-Django @ file:///private/var/folders/sy/f16zz6x50xz3113nwtb9bvq00000gp/T/abs_f7lcd0o60_/croot/django_1724964399554/work
+Django 
 idna==3.8
 requests==2.32.3
 setuptools==72.2.0
