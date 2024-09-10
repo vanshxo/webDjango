@@ -1,11 +1,12 @@
-asgiref @ file:///home/conda/feedstock_root/build_artifacts/asgiref_1711268871457/work
+asgiref 
 certifi==2024.8.30
 charset-normalizer==3.3.2
 Django 
-idna==3.8
+gunicorn 
+packaging
 requests==2.32.3
 setuptools==72.2.0
-sqlparse @ file:///home/conda/feedstock_root/build_artifacts/sqlparse_1721304206023/work
-typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_extensions_1717802530399/work
+sqlparse 
+typing_extensions 
 urllib3==2.2.2
 wheel==0.44.0
